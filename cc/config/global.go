@@ -433,7 +433,10 @@ var (
 	ClangDefaultBase = "prebuilts/clang/host"
 	// The Clang version used in the trunk branch.
 	// NOTE: This is deprecated and will be removed in a future version, use the getter function instead.
-	ClangDefaultVersion = "clang-r584948"
+	// NOTE: legacy 4.9 device bring-up: default to clang-r596125 (newest in the
+	// trimmed prebuilt set). LOS 24 default r584948b is not downloaded, and
+	// r563880 (clang 21.0.0) rejects LOS 24 warning flags.
+	ClangDefaultVersion = "clang-r596125"
 
 	RsGlobalIncludes = []string{
 		"external/clang/lib/Headers",
